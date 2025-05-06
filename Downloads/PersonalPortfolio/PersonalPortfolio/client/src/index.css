@@ -1,0 +1,366 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* =================================================================
+     LIGHT MODE COLORS - EDIT THESE TO CUSTOMIZE YOUR SITE'S THEME
+     =================================================================
+     
+     Format is: HUE SATURATION LIGHTNESS (HSL) 
+     Example: 142 71% 45% (a vibrant green color)
+     - HUE: 0-360 (0/360=red, 120=green, 240=blue)
+     - SATURATION: 0-100% (0%=grayscale, 100%=vivid color)
+     - LIGHTNESS: 0-100% (0%=black, 50%=normal, 100%=white)
+  */
+  :root {
+    /* -------------------- MAIN BRAND COLORS -------------------- */    
+    /* Your primary brand color - used for buttons, accents, UI elements */
+    --primary-accent: 142 71% 45%;  /* Currently: Green */
+    
+    /* Your secondary brand color - used for highlights and contrasts */
+    --secondary-accent: 160 84% 39%; /* Currently: Teal */
+    
+    /* -------------------- TEXT COLORS -------------------- */
+    /* Main text for headings and prominent text */
+    --text-primary: 222 47% 11%;
+    
+    /* Secondary text for paragraphs and less important content */
+    --text-secondary: 215 25% 27%;
+    
+    /* -------------------- BACKGROUND COLORS -------------------- */
+    /* Main background color for the site */
+    --primary-bg: 210 40% 98%;
+    
+    /* Background color for cards, alternating sections */
+    --secondary-bg: 214 32% 91%;
+    
+    /* -------------------- SYSTEM UI COLORS -------------------- */
+    /* These are used for component library elements - advanced users can edit these */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    --primary: 142 71% 45%; /* Matches primary-accent for consistency */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 160 84% 39%; /* Matches secondary-accent for consistency */
+    --secondary-foreground: 0 0% 100%;
+    
+    --card: 214 32% 91%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 214 32% 91%;
+    --popover-foreground: 222 47% 11%;
+    
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 142 71% 45%;
+    
+    --radius: 0.5rem;
+  }
+  
+  /* =================================================================
+     DARK MODE COLORS - EDIT THESE TO CUSTOMIZE DARK MODE THEME
+     =================================================================
+  */
+  .dark {
+    /* -------------------- MAIN BRAND COLORS -------------------- */    
+    /* Keep your accent colors similar in dark mode for consistency */
+    --primary-accent: 142 71% 45%;  /* Keep the same green accent */
+    --secondary-accent: 160 84% 39%; /* Keep the same teal accent */
+    
+    /* -------------------- TEXT COLORS -------------------- */
+    /* Light text on dark backgrounds */
+    --text-primary: 210 40% 98%;
+    --text-secondary: 217 22% 65%;
+    
+    /* -------------------- BACKGROUND COLORS -------------------- */
+    /* Dark background for the site */
+    --primary-bg: 222 47% 11%;
+    
+    /* Slightly lighter background for cards, elements */
+    --secondary-bg: 220 32% 17%;
+    
+    /* -------------------- SYSTEM UI COLORS -------------------- */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --card: 220 32% 17%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 220 32% 17%;
+    --popover-foreground: 210 40% 98%;
+    
+    --muted: 217 22% 25%;
+    --muted-foreground: 217 22% 65%;
+    
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 215 27% 30%;
+    --input: 215 27% 30%;
+    --ring: 142 71% 45%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-primary-bg text-text-primary transition-colors duration-200;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply py-2 transition-colors duration-200;
+  }
+  
+  .nav-link.active {
+    @apply text-primary-accent border-b-2 border-primary-accent;
+  }
+  
+  .skill-bar {
+    @apply h-[6px] bg-secondary-bg rounded-sm overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full rounded-sm bg-primary-accent;
+  }
+  
+  .project-card {
+    @apply transition-all duration-300;
+  }
+  
+  .project-card:hover {
+    @apply transform -translate-y-1 shadow-lg;
+  }
+  
+  .blog-post:hover .blog-title {
+    @apply text-primary-accent;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-accent to-secondary-accent;
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-left {
+    animation: slideLeft 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-right {
+    animation: slideRight 0.5s ease-out forwards;
+  }
+  
+  .animate-scale {
+    animation: scale 0.5s ease-out forwards;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulseSoft 2s infinite;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+  
+  .animate-bounce-subtle {
+    animation: bounceSoft 2s infinite;
+  }
+  
+  /* Animation delays */
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulseSoft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes bounceSoft {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v13/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXskPMBBSSJLm2E.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v13/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMBBSSJLm2E.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7SUc.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJV37Nv7g.woff2) format('woff2');
+}

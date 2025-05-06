@@ -1,0 +1,38 @@
+I need you to create a portfolio website using React and Tailwind CSS. The website should be professional, modern, and visually appealing, with a unique character that sets it apart from generic or childish designs. It should include multiple pages, smooth animated transitions between them, and be fully responsive across devices. The code should be written in JavaScript (using .js files only, no .tsx or other extensions), and it should be modular, well-commented, and easy to edit so I can fit my details into it later.
+Pages to Include:
+
+Home: A hero section with an introduction and a brief overview of who I am and what I do.
+About: A page with a bio, skills, and background information. Include sections for education, experience, and a skills list.
+Projects: A gallery or list of projects with descriptions, images, and links to live demos or repositories.
+Contact: A contact form and/or contact information (email, social media links, etc.).
+Blog (optional but preferred): A list of blog posts or articles with titles, summaries, and links to full posts.
+
+Design Requirements:
+
+Use a dark theme with accent colors (e.g., a primary color like blue or green) to give it a modern, professional look.
+Choose unique typography (e.g., custom fonts from Google Fonts) to add character.
+Ensure the design is not basic or generic; it should feel polished and sophisticated.
+Add smooth animated transitions between pages for a seamless user experience (e.g., fade-ins, slide-ins, etc.).
+
+Technical Requirements:
+
+Build the website using React (JavaScript, not TypeScript).
+Use Tailwind CSS for styling.
+Write all code in .js files (no .tsx or other extensions).
+Organize the code into modular components for easy editing and scalability.
+Ensure the website is fully responsive and works well on desktop, tablet, and mobile devices.
+Include placeholder content (e.g., dummy text, images) that I can easily replace with my own details.
+
+Additional Instructions:
+
+Provide a README.md file that explains:
+How to install the project (e.g., npm install).
+How to run the project locally (e.g., npm start).
+How to edit the content (e.g., where to find and update text, images, etc.).
+
+
+Ensure the code is clean, well-commented, and easy to understand.
+Use React Router for handling multiple pages and navigation.
+Include a navigation bar that links to all the pages.
+
+Summary:Create a React-based portfolio website styled with Tailwind CSS, featuring multiple pages (Home with hero section, About with bio and skills, Projects with gallery, Contact with form, Blog with list of posts), a professional modern design with a dark theme, accent colors, and unique typography, smooth animated transitions between pages, fully responsive layout, JavaScript code with .js files, modular component structure for easy customization, placeholder content, and a README.md file explaining installation, running, and editing instructions. Ensure the code is clean, well-commented, and organized.
