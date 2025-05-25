@@ -30,32 +30,29 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      <div className="text-center max-w-4xl mx-auto">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+      <div className="text-center max-w-5xl mx-auto">
         <motion.h1 
-          className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 floating"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light sf-pro-display mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-gray-100">Kamlesh</span>{" "}
-          <span className="gradient-text">Porwal</span>
+          Kamlesh Porwal
         </motion.h1>
         
-        <div className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-300 mb-6 h-12">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="typewriter-container"
-          >
-            <span className="typewriter-text">{displayText}</span>
-            <span className="border-r-2 border-blue-400 animate-pulse">|</span>
-          </motion.div>
-        </div>
+        <motion.div
+          className="text-xl sm:text-2xl md:text-3xl font-normal sf-pro-text text-gray-600 mb-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          {displayText}
+          <span className="border-r-2 border-black animate-pulse ml-1">|</span>
+        </motion.div>
         
         <motion.p 
-          className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto"
+          className="text-lg sm:text-xl text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed sf-pro-text"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -63,17 +60,30 @@ export default function Hero() {
           Results-driven Full Stack Developer with 2+ years of hands-on experience in React, TypeScript, and MERN stack development.
         </motion.p>
         
-        <motion.button
-          onClick={scrollToProjects}
-          className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 glow"
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
-          View My Work
-        </motion.button>
+          <motion.button
+            onClick={scrollToProjects}
+            className="px-8 py-4 apple-button rounded-xl text-base font-medium sf-pro-text"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            View My Work
+          </motion.button>
+          <motion.a
+            href="/resume.pdf"
+            download
+            className="px-8 py-4 apple-button-secondary rounded-xl text-base font-medium sf-pro-text"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Download Resume
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

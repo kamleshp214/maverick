@@ -54,10 +54,10 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-7xl mx-auto">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-5xl font-light sf-pro-display text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -65,31 +65,31 @@ export default function Skills() {
           Technical Skills
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className="glass glass-hover rounded-2xl p-6 skill-card relative overflow-hidden"
+              className="apple-card rounded-2xl p-6 lg:p-8"
               initial={{ opacity: 0, y: 50 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+              whileHover={{ y: -4 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 pointer-events-none"></div>
-              <h3 className="text-xl font-semibold mb-4 gradient-text relative z-10">
+              <h3 className="text-xl font-semibold mb-6 sf-pro-display">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-2 relative z-10">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.span
                     key={skill}
-                    className="bg-gray-700/80 backdrop-blur-sm px-3 py-2 rounded-full text-sm hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white transition-all duration-300 cursor-default border border-gray-600/50 hover:border-transparent"
+                    className="bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg text-sm sf-pro-text transition-all duration-200 cursor-default"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isVisible ? { opacity: 1, scale: 1 } : {}}
                     transition={{ 
                       duration: 0.4, 
                       delay: categoryIndex * 0.1 + skillIndex * 0.05 
                     }}
-                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileHover={{ scale: 1.05 }}
                   >
                     {skill}
                   </motion.span>

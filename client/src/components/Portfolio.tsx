@@ -7,7 +7,7 @@ import Contact from "./Contact";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen bg-white text-black">
       <Navigation />
       <Hero />
       <About />
@@ -16,9 +16,9 @@ export default function Portfolio() {
       <Contact />
       
       {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400">&copy; 2024 Kamlesh Porwal. All rights reserved.</p>
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 bg-gray-50">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-gray-500 sf-pro-text">&copy; 2024 Kamlesh Porwal. All rights reserved.</p>
         </div>
       </footer>
     </div>
