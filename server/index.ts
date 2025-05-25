@@ -1,7 +1,6 @@
 import express from "express";
-import path from "path";
 import { createServer } from "http";
-import { registerRoutes } from "./routes";
+import path from "path";
 import { setupVite, serveStatic } from "./vite";
 
 const app = express();
@@ -37,43 +36,33 @@ app.use((req, res, next) => {
   next();
 });
 
-(async () => {
-  const server = createServer(app);
-  
-  // Register API routes
-  await registerRoutes(app);
+// Error handling middleware
+app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  const status = err.status || err.statusCode || 500;
+  const message = err.message || "Internal Server Error";
+  res.status(status).json({ message });
+  console.error(err);
+});
 
-  // Error handling middleware
-  app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-    const status = err.status || err.statusCode || 500;
-    const message = err.message || "Internal Server Error";
-    res.status(status).json({ message });
-    console.error(err);
+if (process.env.NODE_ENV === "production") {
+  // Serve static files in production
+  const distPath = path.join(process.cwd(), "client/dist");
+  app.use(express.static(distPath));
+  app.get("*", (_req, res) => {
+    res.sendFile(path.join(distPath, "index.html"));
   });
+} else {
+  // Setup Vite dev server in development
+  const server = createServer(app);
+  setupVite(app, server);
+}
 
-  // Handle static files based on environment
-  if (process.env.NODE_ENV === "development") {
-    await setupVite(app, server);
-  } else {
-    // In production, serve from the client/dist directory
-    const distPath = path.resolve(__dirname, "../client/dist");
-    app.use(express.static(distPath));
-    app.get("*", (_req, res) => {
-      res.sendFile(path.join(distPath, "index.html"));
-    });
-  }
+// Only start the server if we're not in Vercel
+if (process.env.VERCEL !== "1") {
+  const port = process.env.PORT || 5000;
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
 
-  // Only start the server if not running on Vercel
-  if (process.env.VERCEL !== "1") {
-    const port = process.env.PORT || 5000;
-    server.listen({
-      port,
-      host: "0.0.0.0",
-      reusePort: true
-    }, () => {
-      console.log(`Server running on port ${port}`);
-    });
-  }
-})();
-
-export default app;  // This is important for Vercel
+export default app;
