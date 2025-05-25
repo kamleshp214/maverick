@@ -91,7 +91,7 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.0 }}
             >
-              <div className="text-2xl sm:text-3xl font-semibold sf-pro-display text-black">40%</div>
+              <div className="text-2xl sm:text-3xl font-semibold sf-pro-display text-black">80%</div>
               <div className="text-sm sm:text-base text-gray-500 sf-pro-text">Efficiency</div>
             </motion.div>
           </div>
