@@ -36,15 +36,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div 
-            className="flex items-center space-x-2 sf-pro-display font-semibold text-lg"
+            className="sf-pro-display font-semibold text-xl"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-              <span className="text-white text-sm font-bold">K</span>
-            </div>
-            <span className="hidden sm:block">Kamlesh Porwal</span>
+            Maverick
           </motion.div>
           
           {/* Desktop Navigation */}
@@ -80,7 +77,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg minimal-hover"
+            className="md:hidden p-3 rounded-lg minimal-hover touch-target"
             whileTap={{ scale: 0.95 }}
           >
             <svg
@@ -123,7 +120,7 @@ export default function Navigation() {
                   <motion.button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left px-4 py-3 text-base font-medium sf-pro-text minimal-hover rounded-lg"
+                    className="block w-full text-left px-6 py-4 text-base font-medium sf-pro-text minimal-hover rounded-lg touch-target"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}

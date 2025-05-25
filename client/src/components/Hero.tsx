@@ -68,7 +68,7 @@ export default function Hero() {
         >
           <motion.button
             onClick={scrollToProjects}
-            className="px-8 py-4 apple-button rounded-xl text-base font-medium sf-pro-text"
+            className="px-10 py-5 apple-button rounded-xl text-lg font-medium sf-pro-text touch-target"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -77,7 +77,7 @@ export default function Hero() {
           <motion.a
             href="/resume.pdf"
             download
-            className="px-8 py-4 apple-button-secondary rounded-xl text-base font-medium sf-pro-text"
+            className="px-10 py-5 apple-button-secondary rounded-xl text-lg font-medium sf-pro-text touch-target"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
