@@ -63,7 +63,7 @@ export default function Navigation() {
             <motion.a
               href="/resume.pdf"
               download
-              className="ml-4 px-4 py-2 apple-button rounded-lg text-sm"
+              className="ml-4 px-4 py-2 bg-black text-white hover:bg-gray-800 rounded-lg text-sm font-medium transition-all duration-200"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -115,12 +115,12 @@ export default function Navigation() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="px-4 py-6 space-y-1">
+              <div className="px-6 py-8 space-y-2">
                 {navItems.map((item, index) => (
                   <motion.button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left px-6 py-4 text-base font-medium sf-pro-text minimal-hover rounded-lg touch-target"
+                    className="block w-full text-left px-6 py-5 text-lg font-medium sf-pro-text minimal-hover rounded-xl touch-target"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -133,7 +133,7 @@ export default function Navigation() {
                 <motion.a
                   href="/resume.pdf"
                   download
-                  className="block w-full text-center mt-4 px-4 py-3 apple-button rounded-lg text-base font-medium"
+                  className="block w-full text-center mt-6 px-6 py-4 bg-black text-white hover:bg-gray-800 rounded-xl text-lg font-medium transition-all duration-200"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.5 }}

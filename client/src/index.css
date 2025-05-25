@@ -68,6 +68,13 @@
     transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateZ(10px);
   }
   
+  .hero-bg {
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(120, 200, 255, 0.03) 0%, transparent 50%);
+  }
+  
   .apple-nav {
     @apply bg-white/95 backdrop-blur-md border-b border-gray-200;
   }
