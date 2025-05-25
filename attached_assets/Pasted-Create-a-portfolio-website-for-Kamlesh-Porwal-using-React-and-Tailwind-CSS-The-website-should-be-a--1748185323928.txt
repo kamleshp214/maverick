@@ -1,0 +1,96 @@
+Create a portfolio website for Kamlesh Porwal using React and Tailwind CSS. The website should be a static, single-page application with no backend, designed for deployment on platforms like Vercel or Netlify. The design should be fresh, modern, and minimalistic, with a strong focus on animations and transitions to enhance the user experience. **Do not use Particle.js or any particle effects.**
+
+### Design Concept
+- **Theme**: Use a dark theme with a monochromatic palette (shades of gray and white accents) for a sleek, professional look.
+- **Typography**: Use a clean, sans-serif font like Inter or Roboto for a modern aesthetic.
+- **Layout**: Emphasize whitespace and balance, with a grid-based layout for consistency and visual hierarchy.
+- **Animations**: Use Framer Motion to implement subtle yet engaging animations, such as:
+  - Fade-in effects for sections as they come into view.
+  - Hover effects on buttons, links, and project cards (e.g., scale-up or shadow effects).
+  - Smooth page transitions when navigating between sections.
+  - Animated progress bars or skill meters in the About section.
+- **Transitions**: Ensure all interactions (e.g., button clicks, form submissions) have smooth CSS transitions.
+- **UI Elements**: Use glassmorphism effects (semi-transparent backgrounds with blur) for cards and modals to add depth without overwhelming the design.
+- **Navigation**: Implement a sticky navigation bar that transforms into a hamburger menu on mobile, with a slide-in effect for the menu.
+
+The design should feel interactive and dynamic but remain professional and not overly flashy. Avoid clichéd elements like neon glows or excessive gradients.
+
+### Sections and Content
+#### 1. Home
+- **Content**: Hero section with:
+  - Name: "Kamlesh Porwal"
+  - Title: "Full Stack Developer"
+  - Short Bio: "Results-driven Full Stack Developer with 2+ years of hands-on experience in React, TypeScript, and MERN stack development."
+- **Design**: Use a bold, animated typewriter effect for the title. Add a call-to-action button ("View Projects") with a hover animation (e.g., scale or color change).
+
+#### 2. About
+- **Content**: Professional summary:
+  - "Results-driven Full Stack Developer with 2+ years of hands-on experience in React, TypeScript, and MERN stack development. Proven track record of building scalable web applications serving 500+ users and improving development efficiency by 40%. Expertise in frontend architecture, responsive design, and API integration. Seeking to leverage technical skills and leadership experience to contribute to innovative software development projects at a technology-focused organization."
+- **Design**: Present in a centered card with glassmorphism styling. Use fade-in animation as the section comes into view.
+
+#### 3. Skills
+- **Content**: List technical skills in categorized groups:
+  - **Programming Languages**: JavaScript, TypeScript, Python, Java, C++
+  - **Frontend Technologies**: React.js, Next.js, HTML5, CSS3, TailwindCSS, Bootstrap, Responsive Web Design
+  - **Backend Technologies**: Node.js, Express.js, RESTful APIs, Authentication & Authorization
+  - **Databases**: MongoDB, MySQL, Dexie.js (IndexedDB)
+  - **Development Tools**: Git, GitHub, VS Code, npm, Webpack, Chrome DevTools
+  - **Cloud & Deployment**: AWS, Vercel, Netlify
+- **Design**: Display as a grid of tags with hover effects (e.g., slight scale-up and color shift). Use animated progress bars or circular skill meters with fill animations.
+
+#### 4. Projects
+- **Content**: Showcase four projects with cards containing:
+  - Project title
+  - Short description
+  - Technologies used
+  - Embedded video recording placeholder (iframe from YouTube/Vimeo) to showcase the project
+  - Projects:
+    1. **SynapShare**: "A collaborative content sharing platform for students. Features include sharing notes, discussions, and code snippets with a secure file upload system supporting multiple formats."  
+       - **Technologies**: MongoDB, Express.js, React.js, Node.js, TailwindCSS, JWT Authentication  
+       - **Video**: "<iframe width='560' height='315' src='https://www.youtube.com/embed/VIDEO_ID_SYNAPSHARE' title='SynapShare Demo' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" (Placeholder; replace VIDEO_ID_SYNAPSHARE with actual ID)
+    2. **TruthScan**: "An advanced fake news detection platform. Analyzes news articles for credibility using text analysis and pattern recognition, with URL content extraction."  
+       - **Technologies**: Flask, BeautifulSoup4, Bootstrap, JavaScript  
+       - **Video**: "<iframe width='560' height='315' src='https://www.youtube.com/embed/VIDEO_ID_TRUTHSCAN' title='TruthScan Demo' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" (Placeholder; replace VIDEO_ID_TRUTHSCAN with actual ID)
+    3. **Aptify**: "A professional aptitude test platform for BTech students. Features dynamic question generation, detailed results analysis, and downloadable PDF reports."  
+       - **Technologies**: Flask, Google Gemini API, Chart.js, jsPDF, html2canvas  
+       - **Video**: "<iframe width='560' height='315' src='https://www.youtube.com/embed/VIDEO_ID_APTIFY' title='Aptify Demo' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" (Placeholder; replace VIDEO_ID_APTIFY with actual ID)
+    4. **Second Brain**: "A study planning and tracking application. Helps users organize learning materials, track progress, and maintain focus with a Pomodoro timer."  
+       - **Technologies**: React.js, TypeScript, Vite, TailwindCSS, Dexie.js, Express.js  
+       - **Video**: "<iframe width='560' height='315' src='https://www.youtube.com/embed/VIDEO_ID_SECONDBRAIN' title='Second Brain Demo' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" (Placeholder; replace VIDEO_ID_SECONDBRAIN with actual ID)
+- **Design**: Use a grid of cards with glassmorphism styling. Each card should expand or open a modal on click to reveal the video and full details. Add a play button overlay on video thumbnails with a hover animation (e.g., fade-in or scale).
+
+#### 5. Contact
+- **Content**:
+  - Email: "porwalkamlesh5@gmail.com"
+  - LinkedIn: "https://www.linkedin.com/in/kamlesh-porwal-2b1a2a1a6/"
+  - GitHub: "https://github.com/kamleshp214"
+  - Contact Form: Include fields for name, email, and message, using Formspree (action: "https://formspree.io/f/YOUR_FORM_ID"; note to replace YOUR_FORM_ID with actual ID after setup).
+- **Design**: Place in a footer-like section with social icons for LinkedIn and GitHub, and a glassmorphism form card. Add a subtle animation to the form fields on focus.
+
+### Technical Requirements
+- **Framework**: Use React with JSX for component-based architecture.
+- **Styling**: Use Tailwind CSS with custom classes for glassmorphism (e.g., `bg-gray-800 bg-opacity-50 backdrop-blur-md`).
+- **Animations**: Use Framer Motion for all animations and transitions.
+- **Navigation**: Implement smooth scrolling to section IDs. On mobile, use a hamburger menu with a slide-in animation.
+- **Responsiveness**: Use Tailwind’s responsive utilities (e.g., `sm:`, `md:`, `lg:`) to ensure the layout adapts to different screen sizes.
+- **Deployment**: Configure for Vercel or Netlify with a `package.json` including:
+  - `"scripts": { "start": "react-scripts start", "build": "react-scripts build" }`
+  - Dependencies: `react`, `react-dom`, `react-scripts`, `tailwindcss`, `framer-motion`.
+
+### Deliverables
+- **Complete Source Code**: Including all React components, Tailwind CSS configurations, and Framer Motion animations.
+- **README File**: Include a README.md with:
+  - Project title and description.
+  - Installation instructions (e.g., `npm install`, `npm run dev`).
+  - Usage instructions (e.g., how to navigate the portfolio).
+  - Customization options (e.g., how to add new projects or change colors).
+  - Deployment instructions for Vercel or Netlify.
+  - Credits and acknowledgments (e.g., libraries used).
+
+### Additional Instructions
+- Use CDN-hosted React (e.g., `cdn.jsdelivr.net`) for simplicity.
+- Include placeholder images/icons where assets are missing (e.g., profile picture, project thumbnails).
+- Ensure all animations are optimized for performance and do not hinder the user experience.
+- Generate the complete code, including all components, styles, and configurations, ready to run in a browser.
+
+Please provide the full code for this portfolio website, along with the README file as specified.
