@@ -92,7 +92,7 @@ export default function Portfolio() {
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 sf-pro-text mb-4 md:mb-0">
-              &copy; 2024 Kamlesh Porwal. All rights reserved.
+              &copy; 2025 Kamlesh Porwal. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm sf-pro-text">
               Built with React, TypeScript & Tailwind CSS

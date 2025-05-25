@@ -45,7 +45,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-center sf-pro-text">
-            Results-driven Full Stack Developer with <span className="font-semibold text-black">2+ years</span> of hands-on experience in React, TypeScript, and MERN stack development. Proven track record of building scalable web applications serving <span className="font-semibold text-black">500+ users</span> and improving development efficiency by <span className="font-semibold text-black">40%</span>. Expertise in frontend architecture, responsive design, and API integration. Seeking to leverage technical skills and leadership experience to contribute to innovative software development projects at technology-focused organizations.
+            Results-driven Full Stack Developer and <span className="font-semibold text-black">Student at MIT Ujjain</span> with <span className="font-semibold text-black">2+ years</span> of hands-on experience in React, TypeScript, and MERN stack development. Proven track record of building scalable web applications serving <span className="font-semibold text-black">500+ users</span> and improving development efficiency by <span className="font-semibold text-black">40%</span>. Expertise in frontend architecture, responsive design, and API integration. Seeking to leverage technical skills and leadership experience to contribute to innovative software development projects at technology-focused organizations.
           </p>
         </motion.div>
       </div>
