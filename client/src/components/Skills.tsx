@@ -69,27 +69,27 @@ export default function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className="glass rounded-xl p-6 hover:border-blue-400 transition-all duration-300"
+              className="glass glass-hover rounded-2xl p-6 skill-card relative overflow-hidden"
               initial={{ opacity: 0, y: 50 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 pointer-events-none"></div>
+              <h3 className="text-xl font-semibold mb-4 gradient-text relative z-10">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 relative z-10">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.span
                     key={skill}
-                    className="bg-gray-700 px-3 py-1 rounded-full text-sm hover:bg-blue-500 hover:text-white transition-colors duration-300 cursor-default"
+                    className="bg-gray-700/80 backdrop-blur-sm px-3 py-2 rounded-full text-sm hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white transition-all duration-300 cursor-default border border-gray-600/50 hover:border-transparent"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isVisible ? { opacity: 1, scale: 1 } : {}}
                     transition={{ 
                       duration: 0.4, 
                       delay: categoryIndex * 0.1 + skillIndex * 0.05 
                     }}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.1, y: -2 }}
                   >
                     {skill}
                   </motion.span>

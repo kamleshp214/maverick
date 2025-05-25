@@ -33,13 +33,13 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-4xl mx-auto">
         <motion.h1 
-          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+          className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 floating"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <span className="text-gray-100">Kamlesh</span>{" "}
-          <span className="text-blue-400">Porwal</span>
+          <span className="gradient-text">Porwal</span>
         </motion.h1>
         
         <div className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-300 mb-6 h-12">
@@ -65,14 +65,14 @@ export default function Hero() {
         
         <motion.button
           onClick={scrollToProjects}
-          className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 glow"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          View Projects
+          View My Work
         </motion.button>
       </div>
     </section>
