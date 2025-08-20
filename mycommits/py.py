@@ -31,8 +31,8 @@ def push_changes():
     print("🚀 All commits pushed to GitHub!")
 
 def main():
-    print("🚧 Starting 10 commits...")
-    for i in range(1, 11):
+    print("🚧 Starting 100 commits...")
+    for i in range(1, 101):
         make_commit(i)
     push_changes()
     print("✅ Done! Your GitHub contribution graph should show green!")
